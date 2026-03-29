@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dead-point:block/deadpoint_gravestone"
+    }
+  }
+}

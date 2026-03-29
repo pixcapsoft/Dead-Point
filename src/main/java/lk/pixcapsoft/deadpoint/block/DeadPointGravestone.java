@@ -1,8 +1,6 @@
 package lk.pixcapsoft.deadpoint.block;
 
 import lk.pixcapsoft.deadpoint.DeadPoint;
-import net.fabricmc.fabric.api.event.player.ItemEvents;
-import net.minecraft.client.renderer.item.properties.select.ItemBlockState;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -10,11 +8,11 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemInstance;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
+import net.minecraft.world.item.CreativeModeTabs;
 import java.util.function.Function;
 
 public class DeadPointGravestone {
@@ -36,6 +34,7 @@ public class DeadPointGravestone {
 
             BlockItem blockItem = new BlockItem(block, new Item.Properties().setId(itemKey).useBlockDescriptionPrefix());
             Registry.register(BuiltInRegistries.ITEM, itemKey, blockItem);
+
         }
 
         return Registry.register(BuiltInRegistries.BLOCK, blockKey, block);
@@ -48,5 +47,9 @@ public class DeadPointGravestone {
         return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(DeadPoint.MOD_ID, name));
     }
 
-    public static void initialize() {}
+    public static void initialize() {
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register((itemGroup) -> {
+            itemGroup.accept(DEADPOINT_GRAVESTONE.asItem());
+        });
+    }
 }
