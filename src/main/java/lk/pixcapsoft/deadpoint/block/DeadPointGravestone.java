@@ -1,27 +1,32 @@
 package lk.pixcapsoft.deadpoint.block;
 
 import lk.pixcapsoft.deadpoint.DeadPoint;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Display;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.state.BlockState;
+
 import java.util.function.Function;
 
-public class DeadPointGravestone {
+public class DeadPointGravestone{
 
     public static final Block DEADPOINT_GRAVESTONE = register(
             "deadpoint_gravestone",
             Block::new,
-            BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(0.5f).noOcclusion(),
+            BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(0.5f).noOcclusion().lightLevel(state -> 8),
             true
     );
 
