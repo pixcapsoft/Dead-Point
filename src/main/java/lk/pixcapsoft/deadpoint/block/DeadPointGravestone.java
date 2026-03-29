@@ -6,6 +6,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.entity.Display;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -20,7 +21,7 @@ public class DeadPointGravestone {
     public static final Block DEADPOINT_GRAVESTONE = register(
             "deadpoint_gravestone",
             Block::new,
-            BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(0.5f),
+            BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(0.5f).noOcclusion(),
             true
     );
 

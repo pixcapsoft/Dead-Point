@@ -1,7 +1,9 @@
 {
+    "render_type": "minecraft:cutout",
 	"format_version": "26.1",
 	"credit": "PixCap Soft",
 	"textures": {
+      "particle": "minecraft:block/stone",
 		"0": "dead-point:block/deadpoint_gravestone"
 	},
 	"elements": [

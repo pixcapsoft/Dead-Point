@@ -9,6 +9,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -27,17 +28,21 @@ public class DeadPoint implements ModInitializer {
         registerDeath();
         registerRespawn();
         DeadPointGravestone.initialize();
+
 	}
 
     public void registerDeath() {
         ServerLivingEntityEvents.AFTER_DEATH.register((livingEntity, damageSource) -> {
             if (livingEntity instanceof Player player) {
-                BlockPos deathpos = player.getOnPos();
+                BlockPos deathpos = player.blockPosition();
                 double x = deathpos.getX();
                 double y = deathpos.getY();
                 double z = deathpos.getZ();
 
+                ServerLevel level = (ServerLevel) player.level();
+
                 DeathPointStorage.store(player.getUUID(), deathpos, player.level().dimension());
+                level.setBlockAndUpdate(deathpos, DeadPointGravestone.DEADPOINT_GRAVESTONE.defaultBlockState());
             }
         } );
     }
