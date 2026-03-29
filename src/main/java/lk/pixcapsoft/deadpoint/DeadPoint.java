@@ -1,5 +1,6 @@
 package lk.pixcapsoft.deadpoint;
 
+import lk.pixcapsoft.deadpoint.block.DeadPointGravestone;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
@@ -25,7 +26,7 @@ public class DeadPoint implements ModInitializer {
 	public void onInitialize() {
         registerDeath();
         registerRespawn();
-
+        DeadPointGravestone.initialize();
 	}
 
     public void registerDeath() {

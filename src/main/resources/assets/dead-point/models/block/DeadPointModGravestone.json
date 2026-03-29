@@ -1,0 +1,72 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "DeadPointModGravestoneTexture"
+	},
+	"elements": [
+		{
+			"from": [7, 0, 7],
+			"to": [9, 16, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 7]},
+			"faces": {
+				"north": {"uv": [0, 0, 2, 16], "texture": "#0"},
+				"east": {"uv": [2, 0, 4, 16], "texture": "#0"},
+				"south": {"uv": [4, 0, 6, 16], "texture": "#0"},
+				"west": {"uv": [6, 0, 8, 16], "texture": "#0"},
+				"up": {"uv": [10, 2, 8, 0], "texture": "#0"},
+				"down": {"uv": [10, 2, 8, 4], "texture": "#0"}
+			}
+		},
+		{
+			"from": [2, 10, 7],
+			"to": [14, 12, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 10, 7]},
+			"faces": {
+				"north": {"uv": [0, 0, 12, 2], "texture": "#0"},
+				"east": {"uv": [0, 8, 2, 10], "texture": "#0"},
+				"south": {"uv": [0, 2, 12, 4], "texture": "#0"},
+				"west": {"uv": [2, 8, 4, 10], "texture": "#0"},
+				"up": {"uv": [12, 6, 0, 4], "texture": "#0"},
+				"down": {"uv": [12, 6, 0, 8], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [0.82, 0.82, 0.82]
+		},
+		"thirdperson_lefthand": {
+			"scale": [0.82, 0.82, 0.82]
+		},
+		"firstperson_righthand": {
+			"rotation": [-12, -28, -12],
+			"scale": [0.82, 0.82, 0.82]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-12, -28, -12],
+			"scale": [0.82, 0.82, 0.82]
+		},
+		"ground": {
+			"scale": [0.82, 0.82, 0.82]
+		},
+		"gui": {
+			"rotation": [0, -21, 0],
+			"scale": [0.82, 0.82, 0.82]
+		},
+		"fixed": {
+			"scale": [0.82, 0.82, 0.82]
+		},
+		"on_shelf": {
+			"scale": [0.82, 0.82, 0.82]
+		}
+	},
+	"groups": [
+		{
+			"name": "group",
+			"origin": [5, 10, 7],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}
