@@ -40,7 +40,11 @@ A **Minecraft Fabric mod** that helps you recover your lost items by giving you 
 ---
 
 ## 📝 Changelog
-- 🟢 v1.0: Initial release with all common features
+- 🟢 v3.28-MC26.1: Initial release with all common features
+- 🟡 v3.30-MC26.1: Fixed all bugs,
+				   Added Gravestone block,
+				   Now in singleplayer world Gravestone will be placed at your death location,
+				   Gravestone give light at night so you can easily find your death location even at the night.
 
 ---
 
