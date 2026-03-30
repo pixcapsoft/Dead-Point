@@ -6,6 +6,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
@@ -42,7 +43,10 @@ public class DeadPoint implements ModInitializer {
                 ServerLevel level = (ServerLevel) player.level();
 
                 DeathPointStorage.store(player.getUUID(), deathpos, player.level().dimension());
-                level.setBlockAndUpdate(deathpos, DeadPointGravestone.DEADPOINT_GRAVESTONE.defaultBlockState());
+                if (!level.getServer().isDedicatedServer()) {
+                    level.setBlockAndUpdate(deathpos, DeadPointGravestone.DEADPOINT_GRAVESTONE.defaultBlockState());
+                }
+
             }
         } );
     }
@@ -64,6 +68,12 @@ public class DeadPoint implements ModInitializer {
                 boolean keepInventory = serverPlayer.level()
                         .getGameRules()
                         .get(GameRules.KEEP_INVENTORY);
+
+                ServerLevel level = (ServerLevel) serverPlayer1.level();
+
+                if (level.getServer().isDedicatedServer()) {
+                    serverPlayer1.sendSystemMessage(Component.literal("We can only spawn gravestone in singleplayer world. Currently you are on multiplayer world. - Dead POint Mod").withStyle(ChatFormatting.RED));
+                }
 
                 if (keepInventory) {
                     serverPlayer1.sendSystemMessage(
