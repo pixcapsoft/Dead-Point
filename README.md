@@ -60,4 +60,4 @@ Dead Point mod is licensed under *CC-4.0*. See **[LICENSE](https://github.com/pi
 
 🌟 *Happy exploring, and may your loot always find its way back to you!*
 
-**Copyright © 2026 PixCap Soft**
+**Copyright © 2026 PixCap Soft. All Rights Reserved.**
