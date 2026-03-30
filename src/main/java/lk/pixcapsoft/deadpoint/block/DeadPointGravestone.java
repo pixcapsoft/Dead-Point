@@ -21,7 +21,7 @@ public class DeadPointGravestone{
     public static final Block DEADPOINT_GRAVESTONE = register(
             "deadpoint_gravestone",
             Block::new,
-            BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(0.5f).noOcclusion().lightLevel(state -> 8),
+            BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(0.5f).noOcclusion().lightLevel(state -> 14),
             true
     );
 
