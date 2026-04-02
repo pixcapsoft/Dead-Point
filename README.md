@@ -1,4 +1,4 @@
-# 📖 Respawn Book Mod (known as Dead Point Mod)
+# 📖 Respawn Book Mod (known as Dead Point/ Death Book Mod)
 
 A **Minecraft Fabric mod** that helps you recover your lost items by giving you a book 📘 with your **last death coordinates** upon respawning. No more wandering aimlessly — just follow the numbers!
 
