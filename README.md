@@ -45,6 +45,7 @@ A **Minecraft Fabric mod** that helps you recover your lost items by giving you 
 				   Added Gravestone block,
 				   Now in singleplayer world Gravestone will be placed at your death location,
 				   Gravestone give light at night so you can easily find your death location even at the night.
+- 🟠 v4.02-MC.26.1: Changed logo & mod name to Respawn Book
 
 ---
 
