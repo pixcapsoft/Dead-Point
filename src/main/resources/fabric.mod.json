@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "dead-point",
 	"version": "${version}",
-	"name": "Dead Point(Death Book/Death Point)",
+	"name": "Respawn Book",
 	"description": "This simple mod give you book with your last death location everytime you'll respawn.",
 	"authors": [
 		"PixCap Soft"

@@ -72,7 +72,7 @@ public class DeadPoint implements ModInitializer {
                 ServerLevel level = (ServerLevel) serverPlayer1.level();
 
                 if (level.getServer().isDedicatedServer()) {
-                    serverPlayer1.sendSystemMessage(Component.literal("We can only spawn gravestone in singleplayer world. Currently you are on multiplayer world. - Dead Point Mod").withStyle(ChatFormatting.RED));
+                    serverPlayer1.sendSystemMessage(Component.literal("We can only spawn gravestone in singleplayer world. Currently you are on multiplayer world. - Respawn Book Mod").withStyle(ChatFormatting.RED));
                 }
 
                 if (keepInventory) {

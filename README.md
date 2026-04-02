@@ -1,4 +1,4 @@
-# 📖 Dead Point Mod
+# 📖 Respawn Book Mod (known as Dead Point Mod)
 
 A **Minecraft Fabric mod** that helps you recover your lost items by giving you a book 📘 with your **last death coordinates** upon respawning. No more wandering aimlessly — just follow the numbers!
 
@@ -14,8 +14,8 @@ A **Minecraft Fabric mod** that helps you recover your lost items by giving you 
 
 ## ⚙️ Installation
 1. 🔧 Download and install **Minecraft Fabric** for your version of Minecraft  
-2. 📥 Download the **Dead Point mod** from Modrinth or a trusted mod repository  
-3. 📂 Place the Dead Point mod `.jar` file in your `.minecraft/mods` folder  
+2. 📥 Download the **Respawn Book mod** from Modrinth or a trusted mod repository  
+3. 📂 Place the Respawn Book mod `.jar` file in your `.minecraft/mods` folder  
 4. 🚀 Launch Minecraft with the Fabric profile  
 
 ---
@@ -54,7 +54,7 @@ Join our **[Telegram Channel](https://t.me/pixcap_announcement)** for support, g
 ---
 
 ## 📜 License
-Dead Point mod is licensed under *CC-4.0*. See **[LICENSE](https://github.com/pixcapsoft/Dead-Point/blob/main/LICENSE)** for details.  
+Respawn Book mod is licensed under *CC-4.0*. See **[LICENSE](https://github.com/pixcapsoft/Dead-Point/blob/main/LICENSE)** for details.  
 
 ---
 

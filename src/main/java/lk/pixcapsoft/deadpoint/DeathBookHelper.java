@@ -26,13 +26,13 @@ public class DeathBookHelper {
                 .append(Component.literal(String.valueOf(deathpos.getZ())).withStyle(ChatFormatting.GRAY))
                 .append(Component.literal("\nAt: ").withStyle(ChatFormatting.DARK_PURPLE))
                 .append(Component.literal(deathDimName).withStyle(ChatFormatting.DARK_GRAY))
-                .append(Component.literal("\n\nDead Point Mod").withStyle(ChatFormatting.DARK_GREEN))
+                .append(Component.literal("\n\nRespawn Book Mod").withStyle(ChatFormatting.DARK_GREEN))
                 .append(Component.literal("\nA mod by PixCap Soft.").withStyle(ChatFormatting.DARK_AQUA));
 
 
         WrittenBookContent content = new WrittenBookContent(
                 Filterable.passThrough("Death Location"),
-                String.valueOf("Dead Point mod by PixCapSoft"),
+                String.valueOf("Respawn Book mod by PixCapSoft"),
                 0,
                 List.of(Filterable.passThrough(page)),
                 true
